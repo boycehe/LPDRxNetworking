@@ -1,5 +1,11 @@
 PODS:
-  - LPDRxNetworking (0.1.0)
+  - Alamofire (4.6.0)
+  - LPDRxNetworking (0.1.0):
+    - Alamofire (~> 4.5)
+    - ObjectMapper (~> 3.1)
+    - RxSwift (~> 4.0)
+  - ObjectMapper (3.1.0)
+  - RxSwift (4.1.2)
 
 DEPENDENCIES:
   - LPDRxNetworking (from `../`)
@@ -9,7 +15,10 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  LPDRxNetworking: 5ba57efb3ef9c3c39de90cc919bb6eb4cbf1d330
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  LPDRxNetworking: adc0b07ba321ed231f3a8bbc1b2ea549ea0841de
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
 
 PODFILE CHECKSUM: b7a61179da06689562b5ec277500bea05bb8a48f
 
