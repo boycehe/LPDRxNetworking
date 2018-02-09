@@ -1,0 +1,16 @@
+PODS:
+  - LPDRxNetworking (0.1.0)
+
+DEPENDENCIES:
+  - LPDRxNetworking (from `../`)
+
+EXTERNAL SOURCES:
+  LPDRxNetworking:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LPDRxNetworking: 5ba57efb3ef9c3c39de90cc919bb6eb4cbf1d330
+
+PODFILE CHECKSUM: b7a61179da06689562b5ec277500bea05bb8a48f
+
+COCOAPODS: 1.4.0.beta.2
