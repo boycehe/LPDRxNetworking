@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  LPDRxNetworking
 //
-//  Created by hepeilin1987@qq.com on 02/09/2018.
-//  Copyright (c) 2018 hepeilin1987@qq.com. All rights reserved.
+//  Created by boycehe.com on 02/09/2018.
+//  Copyright (c) 2018 boycehe.com. All rights reserved.
 //
 
 import UIKit

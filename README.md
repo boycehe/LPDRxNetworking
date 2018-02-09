@@ -1,6 +1,6 @@
 # LPDRxNetworking
 
-[![CI Status](http://img.shields.io/travis/hepeilin1987@qq.com/LPDRxNetworking.svg?style=flat)](https://travis-ci.org/hepeilin1987@qq.com/LPDRxNetworking)
+[![CI Status](http://img.shields.io/travis/boycehe.com/LPDRxNetworking.svg?style=flat)](https://travis-ci.org/boycehe.com/LPDRxNetworking)
 [![Version](https://img.shields.io/cocoapods/v/LPDRxNetworking.svg?style=flat)](http://cocoapods.org/pods/LPDRxNetworking)
 [![License](https://img.shields.io/cocoapods/l/LPDRxNetworking.svg?style=flat)](http://cocoapods.org/pods/LPDRxNetworking)
 [![Platform](https://img.shields.io/cocoapods/p/LPDRxNetworking.svg?style=flat)](http://cocoapods.org/pods/LPDRxNetworking)
@@ -22,7 +22,7 @@ pod 'LPDRxNetworking'
 
 ## Author
 
-hepeilin1987@qq.com, hepeilin1987@qq.com
+boycehe.com, boycehe.com
 
 ## License
 
