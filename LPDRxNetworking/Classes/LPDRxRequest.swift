@@ -26,46 +26,46 @@ public enum LPDRxResponseSerializerType{
 }
 
 
-class LPDRxRequest: NSObject {
+public class LPDRxRequest: NSObject {
   
-  var requestParameters:Dictionary<String,Any> = Dictionary()
-  var headerField:Dictionary<String,String> = Dictionary()
-  var contentType:String    = ""
-  var timeoutInterval:Int   = 30
-  var cachePolicy:NSURLRequest.CachePolicy = .useProtocolCachePolicy
-  var acceptableContentTypes:Set<String> = Set()
-  var path:String         = ""
-  var identifier:String   = ""
-  var dataTask:URLSessionDataTask?
-  var priority:LPDRxRequestPriority   = .normal
-  var method:HTTPMethod   = .get
-  var responseSerializeClass:AnyClass?
-  var responseObject:AnyObject?
-  var responseType:LPDRxResponseSerializerType = .json
-  var formData:(()->MultipartFormData?)?
+ public var requestParameters:Dictionary<String,Any> = Dictionary()
+ public var headerField:Dictionary<String,String> = Dictionary()
+ public var contentType:String    = ""
+ public var timeoutInterval:Int   = 30
+ public var cachePolicy:NSURLRequest.CachePolicy = .useProtocolCachePolicy
+ public var acceptableContentTypes:Set<String> = Set()
+ public var path:String         = ""
+ public var identifier:String   = ""
+ public var dataTask:URLSessionDataTask?
+ public var priority:LPDRxRequestPriority   = .normal
+ public var method:HTTPMethod   = .get
+ public var responseSerializeClass:AnyClass?
+ public var responseObject:AnyObject?
+ public var responseType:LPDRxResponseSerializerType = .json
+ public var formData:(()->MultipartFormData?)?
+ 
+ 
   
-  func setValue(_ value: Any?, forHeaderField key: String) {
-    
+ public func setValue(_ value: String, forHeaderField key: String) {
+  
+    self.headerField[key] = value
     
   }
   
-  func setParameterValue(_ value: Any?, forKey key: String) {
+ public func setParameterValue(_ value: Any, forKey key: String) {
+  
+      self.requestParameters[key] = value
+  
+  }
+  
+ public func cancel() {
     
   }
   
-  func cancel() {
-    
-  }
+ public func rx_value()->Observable<Any>?{
   
-  func rx_value()->Observable<Any>?{
-    
-  return  Observable.create { (observer) -> Disposable in
-    
-    
-    
-      return Disposables.create {  }
-    }
-    
+    return LPDRxNetworkingManager.rx_request(self.path, parameters: self, identifier: self.identifier)
+  
   }
   
   

@@ -13,13 +13,12 @@ import RxSwift
 
 class LPDRxNetworkingManager: NSObject {
   
-
+ 
   class func rx_request(_ path:String,parameters:LPDRxRequest,identifier:String)-> Observable<Any>?{
     
     return  Observable.create { (observer) -> Disposable in
       
-
-      
+      LPDRxObserverPool.sharedInstance.addObserver(observer: observer, identifier: identifier)
       self.request(path, parameters: parameters)
     
       return Disposables.create {  }
@@ -30,7 +29,6 @@ class LPDRxNetworkingManager: NSObject {
   }
   
  
-  
   class func request(_ path:String,parameters:LPDRxRequest){
     
     var url = ""
@@ -48,13 +46,27 @@ class LPDRxNetworkingManager: NSObject {
     }
     
     
-    Alamofire.request(url, method:parameters.method, parameters: parametersDic, encoding: JSONEncoding.prettyPrinted, headers: parameters.headerField).responseJSON { response in
-      
-   
-      
+    Alamofire.request(url, method:parameters.method, parameters: parametersDic, encoding: JSONEncoding.prettyPrinted, headers: nil).responseJSON { response in
+      onAllNext(identifier: parameters.identifier, response: response)
     }
     
     
+  }
+  
+  class func onAllNext(identifier:String,response:DataResponse<Any>){
+    
+    let obArr = LPDRxObserverPool.sharedInstance.allObserversIdentifier(identifier)
+    
+    if let obs = obArr {
+    
+      for ob in obs {
+        let observer = ob as! AnyObserver<Any>
+        observer.onNext(response)
+      }
+      
+    }
+  
+  
   }
  
  

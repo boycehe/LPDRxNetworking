@@ -8,13 +8,13 @@
 import UIKit
 
 
-class LPDRxNetworkingConfig: NSObject {
+public class LPDRxNetworkingConfig: NSObject {
   
-  var baseUrl:String = ""
-  var headerField:Dictionary<String,String>?
-  var crdential:URLCredential?
+ public var baseUrl:String = ""
+ public var headerField:Dictionary<String,String>?
+ public var crdential:URLCredential?
   
-  static let sharedInstance = LPDRxNetworkingConfig()
+ public static let sharedInstance = LPDRxNetworkingConfig()
 
   
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2DEB180654BED9A29F32024C /* Pods_LPDRxNetworking_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5526604E2F9D0476760EBF65 /* Pods_LPDRxNetworking_Example.framework */; };
-		4EAB9D7285652D372D4389D2 /* Pods_LPDRxNetworking_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D55C34CA55B316575F4768 /* Pods_LPDRxNetworking_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -29,7 +28,6 @@
 
 /* Begin PBXFileReference section */
 		369613EBD6D96A3318C83D07 /* Pods-LPDRxNetworking_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPDRxNetworking_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LPDRxNetworking_Example/Pods-LPDRxNetworking_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		4EEAE366CF74BA9802F8C68E /* Pods-LPDRxNetworking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPDRxNetworking_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LPDRxNetworking_Tests/Pods-LPDRxNetworking_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5526604E2F9D0476760EBF65 /* Pods_LPDRxNetworking_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LPDRxNetworking_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D0EF8C292B9CD09FBBD6B9 /* Pods-LPDRxNetworking_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPDRxNetworking_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LPDRxNetworking_Example/Pods-LPDRxNetworking_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5CE8960F900C2063EDB0574F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -44,7 +42,6 @@
 		607FACE51AFB9204008FA782 /* LPDRxNetworking_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LPDRxNetworking_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		8891884E04A04ACC26585615 /* Pods-LPDRxNetworking_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPDRxNetworking_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LPDRxNetworking_Tests/Pods-LPDRxNetworking_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5D55C34CA55B316575F4768 /* Pods_LPDRxNetworking_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LPDRxNetworking_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19B67614C8236A3230B5648 /* LPDRxNetworking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LPDRxNetworking.podspec; path = ../LPDRxNetworking.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +59,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EAB9D7285652D372D4389D2 /* Pods_LPDRxNetworking_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +149,6 @@
 			children = (
 				369613EBD6D96A3318C83D07 /* Pods-LPDRxNetworking_Example.debug.xcconfig */,
 				57D0EF8C292B9CD09FBBD6B9 /* Pods-LPDRxNetworking_Example.release.xcconfig */,
-				8891884E04A04ACC26585615 /* Pods-LPDRxNetworking_Tests.debug.xcconfig */,
-				4EEAE366CF74BA9802F8C68E /* Pods-LPDRxNetworking_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -186,12 +180,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "LPDRxNetworking_Tests" */;
 			buildPhases = (
-				2D70319B0546EFB68CC33A6F /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				75E137BBA9BE0855A5607A07 /* [CP] Embed Pods Frameworks */,
-				3889019ADEBF657C529E947B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,39 +255,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D70319B0546EFB68CC33A6F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LPDRxNetworking_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3889019ADEBF657C529E947B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LPDRxNetworking_Tests/Pods-LPDRxNetworking_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		452A45A88FA5692120D718D9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,21 +271,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		75E137BBA9BE0855A5607A07 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LPDRxNetworking_Tests/Pods-LPDRxNetworking_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7F85F96B95C02E1D3BED6B0B /* [CP] Copy Pods Resources */ = {
@@ -550,7 +493,6 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8891884E04A04ACC26585615 /* Pods-LPDRxNetworking_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -571,7 +513,6 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EEAE366CF74BA9802F8C68E /* Pods-LPDRxNetworking_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
