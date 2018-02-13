@@ -39,17 +39,38 @@ class LPDRxNetworkingManager: NSObject {
        url = path
     }
     
-    var parametersDic : Dictionary<String,Any> = Dictionary()
+    var parametersDic : Parameters = Dictionary()
     
     for (key,value) in parameters.requestParameters {
         parametersDic.updateValue(value, forKey:key)
     }
     
     
-    Alamofire.request(url, method:parameters.method, parameters: parametersDic, encoding: JSONEncoding.prettyPrinted, headers: nil).responseJSON { response in
-      onAllNext(identifier: parameters.identifier, response: response)
+    Alamofire.request(url, method:parameters.method, parameters: parametersDic, encoding: URLEncoding.default, headers: nil).responseJSON { response in
+      
+      if response.result.value != nil {
+           onAllNext(identifier: parameters.identifier, response: response)
+      }else{
+           onAllError(identifier: parameters.identifier, error: response.error!)
+      }
+      
     }
     
+  }
+  
+  
+  class func onAllError(identifier:String,error:Error){
+    
+    let obArr = LPDRxObserverPool.sharedInstance.allObserversIdentifier(identifier)
+    
+    if let obs = obArr {
+      
+      for ob in obs {
+        let observer = ob as! AnyObserver<Any>
+        observer.onError(error)
+      }
+      
+    }
     
   }
   

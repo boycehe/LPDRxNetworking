@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     //  disposable?.dispose()
       
       LPDRxNetworkingConfig.sharedInstance.baseUrl = "http://www.sojson.com/"
-      
+    
        let request2 = LPDRxRequest()
       request2.path = "open/api/weather/json.shtml"
       request2.identifier = "aaabbb12"
@@ -61,8 +61,9 @@ class ViewController: UIViewController {
       }, onDisposed: {
         print("onDisposed2")
       })
+ 
       
-      
+
 
     }
 
