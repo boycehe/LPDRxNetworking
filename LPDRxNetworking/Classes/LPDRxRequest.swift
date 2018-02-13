@@ -36,13 +36,14 @@ public class LPDRxRequest: NSObject {
  public var acceptableContentTypes:Set<String> = Set()
  public var path:String         = ""
  public var identifier:String   = ""
- public var dataTask:URLSessionDataTask?
+ 
  public var priority:LPDRxRequestPriority   = .normal
  public var method:HTTPMethod   = .get
  public var responseSerializeClass:AnyClass?
- public var responseObject:AnyObject?
+ public var responseObject:Any?
  public var responseType:LPDRxResponseSerializerType = .json
  public var formData:(()->MultipartFormData?)?
+  var dataRequest:DataRequest?
  
  
   
@@ -59,7 +60,7 @@ public class LPDRxRequest: NSObject {
   }
   
  public func cancel() {
-    
+    self.dataRequest?.cancel()
   }
   
  public func rx_value()->Observable<Any>?{
